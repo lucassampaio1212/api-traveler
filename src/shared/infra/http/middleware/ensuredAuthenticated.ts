@@ -1,4 +1,5 @@
 
+import UsersRepositories from "@modules/Accounts/infra/typeorm/repositories/UsersRepositories";
 import AppError from "@shared/errors/appError";
 import {Request, Response, NextFunction} from "express";
 import { verify } from "jsonwebtoken";
@@ -26,6 +27,16 @@ export default async function ensureAuthenticated(
           token,
           "7a62dcd6a72da3c7fdbba28d47ad3807"
       ) as ITokenPayload;
+
+      const usersRepository = new UsersRepositories();
+
+      const user = await usersRepository.findById(user_id)
+
+      if(!user){
+        throw new AppError("User does not exists!", 401)
+      }
+
+
       request.user = {
         id: user_id,
     };

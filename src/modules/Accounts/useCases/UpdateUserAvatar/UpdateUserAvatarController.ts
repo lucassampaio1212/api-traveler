@@ -17,6 +17,6 @@ export default class UpdateUserAvatarController {
             avatar_file,
         });
 
-        return response.status(200).send();
+        return response.status(204).send();
     }
 }
