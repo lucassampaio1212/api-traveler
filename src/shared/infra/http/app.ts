@@ -16,6 +16,7 @@ const app = express();
 app.use(express.json());
 
 app.use("/Avatar", express.static(`${upload.tmpFolder}/Avatar`));
+app.use("/Cities", express.static(`${upload.tmpFolder}/Cities`));
 
 app.use(router);
 
