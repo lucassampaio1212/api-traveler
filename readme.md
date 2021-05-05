@@ -1,7 +1,7 @@
 # Api-Traveler (Viajante)
 
-Traveler é uma aplicação para pessoas que gostam de viajar pelo o brasil.
-estou desenvolvendo esse projeto em paralelo com um amigo que é desenvolvedor front end. Nessa aplicação estou responsável pelo Backend
+Traveler é uma aplicação web que permite usuários buscarem por qualquer cidade (desde que cadastradas na plataforma) para que possam conhecer um pouco sobre ela na hora de planejar aquela viagem tão esperada.
+A versão Dashboard do Traveler representa a visão de administradores e moderadores, ou seja, todas essas funcionalidades são para usuários que possuem permissão para alterarem (cadastrar, excluir ou editar) informações das cidades na plataforma.
 
 ## Tecnologias usadas
 
@@ -9,6 +9,12 @@ estou desenvolvendo esse projeto em paralelo com um amigo que é desenvolvedor f
 - [x] Typescript
 - [x] Express
 - [x] TypeORM
+- [x] Postgres
 - [x] JWT
 - [x] DDD
 - [x] SOLID
+
+# Desenvolvedores
+
+- Lucas Sampaio (Backend)
+- Luis Carlos (Front-End)
