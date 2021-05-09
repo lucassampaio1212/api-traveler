@@ -3,6 +3,7 @@ import authenticateRoutes from "./authenticate.routes";
 import categoriesRoutes from "./categories.routes";
 import citiesRoutes from "./cities.routes";
 import passwordRouter from "./password.routes";
+import placesRoutes from "./places.routes";
 import usersRoutes from "./users.routes";
 
 
@@ -13,5 +14,6 @@ router.use("/users", usersRoutes);
 router.use("/password", passwordRouter);
 router.use("/categories", categoriesRoutes);
 router.use("/cities", citiesRoutes);
+router.use("/places", placesRoutes);
 
 export default router;

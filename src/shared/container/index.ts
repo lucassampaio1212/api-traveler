@@ -11,6 +11,10 @@ import CitiesRepositories from "@modules/Tourism/infra/typeorm/repositories/Citi
 import ICitiesRepository from "@modules/Tourism/repositories/ICitiesRepository";
 import ICitiesImageRepository from "@modules/Tourism/repositories/ICitiesImageRepository";
 import CitiesImagesRepositories from "@modules/Tourism/infra/typeorm/repositories/CitiesImagesRepositories";
+import IPlacesRepository from "@modules/Tourism/repositories/IPlacesRepository";
+import PlacesRepositories from "@modules/Tourism/infra/typeorm/repositories/PlacesRepositories";
+import IPlacesimageRepository from "@modules/Tourism/repositories/IPlacesImageRepository";
+import PlacesImagesRepositories from "@modules/Tourism/infra/typeorm/repositories/placesImagesRepositories";
 
 
 container.registerSingleton<IUsersRepository>(
@@ -37,3 +41,14 @@ container.registerSingleton<ICitiesImageRepository>(
   "CitiesImagesRepository",
   CitiesImagesRepositories
 );
+
+container.registerSingleton<IPlacesRepository>(
+  "PlacesRepository",
+  PlacesRepositories
+);
+
+container.registerSingleton<IPlacesimageRepository>(
+  "PlacesImagesRepository",
+  PlacesImagesRepositories
+)
+
