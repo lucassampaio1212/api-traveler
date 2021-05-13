@@ -1,6 +1,7 @@
 import CreateCategoryController from "@modules/Tourism/useCases/CreateCategory/CreateCategoryController";
 import ListCategoriesController from "@modules/Tourism/useCases/ListCategory/ListCategoriesController";
 import { Router } from "express";
+import ensureAuthenticated from "../middleware/ensuredAuthenticated";
 
 
 
@@ -11,7 +12,7 @@ const createCategoryController = new CreateCategoryController();
 
 const listCategoriesController = new ListCategoriesController();
 
-categoriesRoutes.post("/", createCategoryController.handle);
+categoriesRoutes.post("/", ensureAuthenticated,createCategoryController.handle);
 
 categoriesRoutes.get("/", listCategoriesController.handle);
 

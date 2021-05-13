@@ -1,5 +1,4 @@
 
-import CitieImage from "@modules/Tourism/infra/typeorm/entities/CitieImages";
 import ICitiesImageRepository from "@modules/Tourism/repositories/ICitiesImageRepository";
 import IStorageProvider from "@shared/container/providers/StorageProviders/IStorageProviders";
 import { inject, injectable } from "tsyringe";

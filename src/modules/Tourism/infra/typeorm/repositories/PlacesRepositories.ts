@@ -14,13 +14,13 @@ export default class PlacesRepositories implements IPlacesRepository {
     this.repository = getRepository(Places);
   }
 
-  public async create({ name, description, category_id, address_id, id }: ICreatePlacesDTO): Promise<Places> {
+  public async create({ name, description, category_id, address_id, id,}: ICreatePlacesDTO): Promise<Places> {
     const places =  this.repository.create({
       name,
       description,
       category_id,
       address_id,
-      id
+      id,
     });
 
     await this.repository.save(places);
@@ -34,6 +34,11 @@ export default class PlacesRepositories implements IPlacesRepository {
     return places;
   }
 
+
+  async findByIds(ids: string[]): Promise<Places[]> {
+    const places = await this.repository.findByIds(ids);
+    return places;
+}
 
 
 }

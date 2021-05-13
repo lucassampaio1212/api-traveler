@@ -10,7 +10,6 @@ export default class ListPlacesController {
 
 
   public async handle(request:Request, response: Response):Promise<Response>{
-
     const listPlacesUseCase = container.resolve(ListPlacesUseCase);
 
     const places = await listPlacesUseCase.execute();

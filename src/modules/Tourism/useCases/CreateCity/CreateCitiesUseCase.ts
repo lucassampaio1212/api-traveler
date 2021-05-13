@@ -6,6 +6,7 @@ import { inject, injectable } from "tsyringe";
 interface IRequest {
   name: string;
   description: string;
+  id?: string;
 }
 
 @injectable()
@@ -16,10 +17,11 @@ export default class CreateCitiesUseCase {
     private citiesRepository: ICitiesRepository,
   ){}
 
-  public async execute({name,description}: IRequest){
+  public async execute({name,description,id,}: IRequest){
     const cities = await this.citiesRepository.create({
       name,
-      description
+      description,
+      id
     });
 
     return cities;

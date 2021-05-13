@@ -18,7 +18,7 @@ class Addresses {
   neighborhood: string;
 
   @Column()
-  number: string;
+  number: number;
 
   constructor(){
     if(!this.id) {

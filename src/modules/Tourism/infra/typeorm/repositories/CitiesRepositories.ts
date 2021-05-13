@@ -13,10 +13,12 @@ export default class CitiesRepositories implements ICitiesRepository {
   constructor(){
     this.repository = getRepository(Cities)
   }
- public async create({ name, description }: ICreateCitiesDTO):Promise<Cities> {
+ public async create({ name, description, places, id }: ICreateCitiesDTO):Promise<Cities> {
    const cities = this.repository.create({
      name,
-     description
+     description,
+     places,
+     id
    });
 
    await this.repository.save(cities);
